@@ -199,17 +199,6 @@ rec {
         buildInputs = with pkgs; [ alsaLib ];
 
 
-
-      };
-      "android_glue" = rec {
-        crateName = "android_glue";
-        version = "0.2.3";
-        edition = "2015";
-        sha256 = "01y495x4i9vqkwmklwn2xk7sqg666az2axjcpkr4iwngdwi48100";
-        authors = [
-          "Pierre Krieger <pierre.krieger1708@gmail.com>"
-        ];
-
       };
       "anyhow" = rec {
         crateName = "anyhow";
@@ -430,7 +419,7 @@ rec {
         };
         resolvedDefaultFeatures = [ "default" "std" ];
       };
-      "calloop 0.10.1" = rec {
+      "calloop" = rec {
         crateName = "calloop";
         version = "0.10.1";
         edition = "2018";
@@ -460,30 +449,6 @@ rec {
           {
             name = "vec_map";
             packageId = "vec_map";
-          }
-        ];
-        features = {
-          "executor" = [ "futures-util" ];
-          "futures-io" = [ "dep:futures-io" ];
-          "futures-util" = [ "dep:futures-util" ];
-        };
-      };
-      "calloop 0.9.3" = rec {
-        crateName = "calloop";
-        version = "0.9.3";
-        edition = "2018";
-        sha256 = "10mbcsd7fj3cg0a463h3003wycv955cnj4pm2gla2sp5xxhyqbmz";
-        authors = [
-          "Victor Berger <victor.berger@m4x.org>"
-        ];
-        dependencies = [
-          {
-            name = "log";
-            packageId = "log";
-          }
-          {
-            name = "nix";
-            packageId = "nix 0.22.3";
           }
         ];
         features = {
@@ -683,11 +648,11 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
           }
           {
             name = "core-graphics";
-            packageId = "core-graphics 0.22.3";
+            packageId = "core-graphics";
           }
           {
             name = "foreign-types";
@@ -723,7 +688,7 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
           }
           {
             name = "core-graphics-types";
@@ -872,34 +837,7 @@ rec {
         };
         resolvedDefaultFeatures = [ "smithay-clipboard" "wayland" "x11" "x11-clipboard" ];
       };
-      "core-foundation 0.7.0" = rec {
-        crateName = "core-foundation";
-        version = "0.7.0";
-        edition = "2015";
-        sha256 = "0wbias8f0m5kyn2pcksi0h58fdslams6nmf16w78fgn42dx4rljp";
-        authors = [
-          "The Servo Project Developers"
-        ];
-        dependencies = [
-          {
-            name = "core-foundation-sys";
-            packageId = "core-foundation-sys 0.7.0";
-          }
-          {
-            name = "libc";
-            packageId = "libc";
-          }
-        ];
-        features = {
-          "chrono" = [ "dep:chrono" ];
-          "mac_os_10_7_support" = [ "core-foundation-sys/mac_os_10_7_support" ];
-          "mac_os_10_8_features" = [ "core-foundation-sys/mac_os_10_8_features" ];
-          "uuid" = [ "dep:uuid" ];
-          "with-chrono" = [ "chrono" ];
-          "with-uuid" = [ "uuid" ];
-        };
-      };
-      "core-foundation 0.9.3" = rec {
+      "core-foundation" = rec {
         crateName = "core-foundation";
         version = "0.9.3";
         edition = "2015";
@@ -910,7 +848,7 @@ rec {
         dependencies = [
           {
             name = "core-foundation-sys";
-            packageId = "core-foundation-sys 0.8.3";
+            packageId = "core-foundation-sys";
           }
           {
             name = "libc";
@@ -926,18 +864,7 @@ rec {
           "with-uuid" = [ "uuid" ];
         };
       };
-      "core-foundation-sys 0.7.0" = rec {
-        crateName = "core-foundation-sys";
-        version = "0.7.0";
-        edition = "2015";
-        sha256 = "1b5qfnnmg49sawwfsb0c0wbj81bqi7h7lh68pmhbidf0jjs1m9xk";
-        authors = [
-          "The Servo Project Developers"
-        ];
-        features = {
-        };
-      };
-      "core-foundation-sys 0.8.3" = rec {
+      "core-foundation-sys" = rec {
         crateName = "core-foundation-sys";
         version = "0.8.3";
         edition = "2015";
@@ -948,37 +875,7 @@ rec {
         features = {
         };
       };
-      "core-graphics 0.19.2" = rec {
-        crateName = "core-graphics";
-        version = "0.19.2";
-        edition = "2015";
-        sha256 = "08z9pgwfc0wb5v3ns7rnb2010q9g42b5vfwhp9fv4spawrs9725k";
-        authors = [
-          "The Servo Project Developers"
-        ];
-        dependencies = [
-          {
-            name = "bitflags";
-            packageId = "bitflags";
-          }
-          {
-            name = "core-foundation";
-            packageId = "core-foundation 0.7.0";
-          }
-          {
-            name = "foreign-types";
-            packageId = "foreign-types";
-          }
-          {
-            name = "libc";
-            packageId = "libc";
-          }
-        ];
-        features = {
-        };
-        resolvedDefaultFeatures = [ "default" ];
-      };
-      "core-graphics 0.22.3" = rec {
+      "core-graphics" = rec {
         crateName = "core-graphics";
         version = "0.22.3";
         edition = "2015";
@@ -993,7 +890,7 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
           }
           {
             name = "core-graphics-types";
@@ -1027,7 +924,7 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
           }
           {
             name = "foreign-types";
@@ -1039,47 +936,6 @@ rec {
           }
         ];
 
-      };
-      "core-video-sys" = rec {
-        crateName = "core-video-sys";
-        version = "0.1.4";
-        edition = "2018";
-        sha256 = "0a1qbn50jrb5hxrfshyb7y0f3pbf4ily6i6nciv7bn8ac4isvv1l";
-        authors = [
-          "luozijun <luozijun.assistant@gmail.com>"
-          "michael.laifx <cihv2@163.com>"
-        ];
-        dependencies = [
-          {
-            name = "cfg-if";
-            packageId = "cfg-if 0.1.10";
-          }
-          {
-            name = "core-foundation-sys";
-            packageId = "core-foundation-sys 0.7.0";
-          }
-          {
-            name = "core-graphics";
-            packageId = "core-graphics 0.19.2";
-            optional = true;
-          }
-          {
-            name = "libc";
-            packageId = "libc";
-          }
-          {
-            name = "objc";
-            packageId = "objc";
-          }
-        ];
-        features = {
-          "all" = [ "display_link" "direct3d" "io_suface" "opengl" ];
-          "core-graphics" = [ "dep:core-graphics" ];
-          "default" = [ "display_link" "metal" ];
-          "display_link" = [ "opengl" "core-graphics" ];
-          "metal" = [ "dep:metal" ];
-        };
-        resolvedDefaultFeatures = [ "core-graphics" "display_link" "opengl" ];
       };
       "coreaudio-rs" = rec {
         crateName = "coreaudio-rs";
@@ -1150,7 +1006,7 @@ rec {
           }
           {
             name = "core-foundation-sys";
-            packageId = "core-foundation-sys 0.8.3";
+            packageId = "core-foundation-sys";
             target = { target, features }: ((target."os" == "macos") || (target."os" == "ios"));
           }
           {
@@ -1613,13 +1469,13 @@ rec {
       };
       "femtovg" = rec {
         crateName = "femtovg";
-        version = "0.3.3";
-        edition = "2018";
+        version = "0.3.5";
+        edition = "2021";
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/femtovg/femtovg";
-          rev = "87fe627794f3f793d8e3a338c838a2f8e8a8aa9d";
-          sha256 = "0k69xdqprw8lsnddxnjy87kwjica8bqh75nisiblvfqhb08ryy0x";
+          rev = "8df076f1dd610b5e0a584f0d7fd7f210988b3684";
+          sha256 = "09n87wmy648inqpdvf9pawjz32s88gi192dq71ngdk7klsylpn1h";
         };
         authors = [
           "Peter Todorov <ptodorov@cytec.bg>"
@@ -1652,7 +1508,7 @@ rec {
           }
           {
             name = "glutin";
-            packageId = "glutin 0.28.0";
+            packageId = "glutin";
             optional = true;
             usesDefaultFeatures = false;
             target = { target, features }: (!(target."arch" == "wasm32"));
@@ -1712,7 +1568,7 @@ rec {
         devDependencies = [
           {
             name = "glutin";
-            packageId = "glutin 0.28.0";
+            packageId = "glutin";
             target = {target, features}: (!(target."arch" == "wasm32"));
           }
           {
@@ -2017,154 +1873,7 @@ rec {
         ];
 
       };
-      "glutin 0.28.0" = rec {
-        crateName = "glutin";
-        version = "0.28.0";
-        edition = "2018";
-        sha256 = "1lpnf61x4jbm55bpdr10k1a1pl3cs719i9y4qibsdj2bajz9vsh0";
-        authors = [
-          "The glutin contributors"
-          "Pierre Krieger <pierre.krieger1708@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "android_glue";
-            packageId = "android_glue";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "cgl";
-            packageId = "cgl";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "cocoa";
-            packageId = "cocoa";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "glutin_egl_sys";
-            packageId = "glutin_egl_sys";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "glutin_egl_sys";
-            packageId = "glutin_egl_sys";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "glutin_egl_sys";
-            packageId = "glutin_egl_sys";
-            target = { target, features }: (target."os" == "windows");
-          }
-          {
-            name = "glutin_emscripten_sys";
-            packageId = "glutin_emscripten_sys";
-            target = { target, features }: (target."os" == "emscripten");
-          }
-          {
-            name = "glutin_gles2_sys";
-            packageId = "glutin_gles2_sys";
-            target = { target, features }: ((target."os" == "ios") || (target."os" == "macos"));
-          }
-          {
-            name = "glutin_glx_sys";
-            packageId = "glutin_glx_sys";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "glutin_wgl_sys";
-            packageId = "glutin_wgl_sys";
-            target = { target, features }: (target."os" == "windows");
-          }
-          {
-            name = "lazy_static";
-            packageId = "lazy_static";
-          }
-          {
-            name = "libloading";
-            packageId = "libloading";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "libloading";
-            packageId = "libloading";
-            target = { target, features }: (target."os" == "windows");
-          }
-          {
-            name = "log";
-            packageId = "log";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "objc";
-            packageId = "objc";
-            target = { target, features }: ((target."os" == "ios") || (target."os" == "macos"));
-          }
-          {
-            name = "osmesa-sys";
-            packageId = "osmesa-sys";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "parking_lot";
-            packageId = "parking_lot 0.11.2";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "parking_lot";
-            packageId = "parking_lot 0.11.2";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "parking_lot";
-            packageId = "parking_lot 0.11.2";
-            target = { target, features }: (target."os" == "windows");
-          }
-          {
-            name = "wayland-client";
-            packageId = "wayland-client";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-            features = [ "dlopen" ];
-          }
-          {
-            name = "wayland-egl";
-            packageId = "wayland-egl";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "freebsd") || (target."os" == "dragonfly") || (target."os" == "netbsd") || (target."os" == "openbsd"));
-          }
-          {
-            name = "winapi";
-            packageId = "winapi";
-            target = { target, features }: (target."os" == "windows");
-            features = [ "winnt" "winuser" "wingdi" "libloaderapi" ];
-          }
-          {
-            name = "winit";
-            packageId = "winit 0.26.1";
-            usesDefaultFeatures = false;
-          }
-        ];
-        features = {
-          "default" = [ "x11" "wayland" "wayland-dlopen" ];
-          "glutin_glx_sys" = [ "dep:glutin_glx_sys" ];
-          "serde" = [ "winit/serde" ];
-          "wayland" = [ "winit/wayland" "winit/wayland-dlopen" "wayland-client" "wayland-egl" ];
-          "wayland-client" = [ "dep:wayland-client" ];
-          "wayland-dlopen" = [ "winit/wayland-dlopen" ];
-          "wayland-egl" = [ "dep:wayland-egl" ];
-          "x11" = [ "winit/x11" "glutin_glx_sys" ];
-        };
-        resolvedDefaultFeatures = [ "glutin_glx_sys" "wayland" "wayland-client" "wayland-dlopen" "wayland-egl" "x11" ];
-      };
-      "glutin 0.29.0" = rec {
+      "glutin" = rec {
         crateName = "glutin";
         version = "0.29.0";
         edition = "2021";
@@ -2186,7 +1895,7 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
             target = { target, features }: (target."os" == "macos");
           }
           {
@@ -2271,7 +1980,7 @@ rec {
           }
           {
             name = "raw-window-handle";
-            packageId = "raw-window-handle 0.5.0";
+            packageId = "raw-window-handle";
             target = { target, features }: (target."os" == "android");
           }
           {
@@ -2295,7 +2004,7 @@ rec {
           }
           {
             name = "winit";
-            packageId = "winit 0.27.1";
+            packageId = "winit";
             usesDefaultFeatures = false;
           }
         ];
@@ -2335,17 +2044,6 @@ rec {
             name = "gl_generator";
             packageId = "gl_generator";
           }
-        ];
-
-      };
-      "glutin_emscripten_sys" = rec {
-        crateName = "glutin_emscripten_sys";
-        version = "0.1.1";
-        edition = "2018";
-        sha256 = "1wb3qfxg3jh6ibb7bxmlmvf4jcpzck3pn0035g1sds3nvx343pl0";
-        authors = [
-          "The glutin contributors"
-          "Hal Gentz <zegentzy@protonmail.com>"
         ];
 
       };
@@ -2968,25 +2666,7 @@ rec {
         };
         resolvedDefaultFeatures = [ "default" "std" "use_std" ];
       };
-      "memmap2 0.3.1" = rec {
-        crateName = "memmap2";
-        version = "0.3.1";
-        edition = "2018";
-        sha256 = "0mz3fdcq443m3a1phrhp2yvd1h9vrvbhinzmi23ik031zzmw5dh0";
-        authors = [
-          "Dan Burkert <dan@danburkert.com>"
-          "Yevhenii Reizner <razrfalcon@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "libc";
-            packageId = "libc";
-            target = { target, features }: (target."unix" or false);
-          }
-        ];
-
-      };
-      "memmap2 0.5.5" = rec {
+      "memmap2" = rec {
         crateName = "memmap2";
         version = "0.5.5";
         edition = "2018";
@@ -3129,56 +2809,6 @@ rec {
         };
         resolvedDefaultFeatures = [ "rounding" ];
       };
-      "ndk 0.5.0" = rec {
-        crateName = "ndk";
-        version = "0.5.0";
-        edition = "2018";
-        sha256 = "17b9imdmv6cffr12bdpvxw1myxdyvaf6jwkmd3w7abn7akv6in4n";
-        authors = [
-          "The Rust Windowing contributors"
-        ];
-        dependencies = [
-          {
-            name = "bitflags";
-            packageId = "bitflags";
-          }
-          {
-            name = "jni-sys";
-            packageId = "jni-sys";
-          }
-          {
-            name = "ndk-sys";
-            packageId = "ndk-sys 0.2.2";
-            rename = "ffi";
-          }
-          {
-            name = "num_enum";
-            packageId = "num_enum";
-          }
-          {
-            name = "thiserror";
-            packageId = "thiserror";
-          }
-        ];
-        features = {
-          "aaudio" = [ "ffi/aaudio" "api-level-26" ];
-          "all" = [ "aaudio" "bitmap" "hardware_buffer" "media" "trace" "api-level-30" ];
-          "api-level-24" = [ "api-level-23" ];
-          "api-level-25" = [ "api-level-24" ];
-          "api-level-26" = [ "api-level-25" ];
-          "api-level-27" = [ "api-level-26" ];
-          "api-level-28" = [ "api-level-27" ];
-          "api-level-29" = [ "api-level-28" ];
-          "api-level-30" = [ "api-level-29" ];
-          "bitmap" = [ "ffi/bitmap" ];
-          "hardware_buffer" = [ "api-level-26" ];
-          "jni" = [ "dep:jni" ];
-          "jni-glue" = [ "dep:jni-glue" ];
-          "media" = [ "ffi/media" ];
-          "test" = [ "ffi/test" "jni" "jni-glue" "all" ];
-          "trace" = [ "api-level-23" ];
-        };
-      };
       "ndk 0.6.0" = rec {
         crateName = "ndk";
         version = "0.6.0";
@@ -3257,7 +2887,7 @@ rec {
           }
           {
             name = "raw-window-handle";
-            packageId = "raw-window-handle 0.5.0";
+            packageId = "raw-window-handle";
           }
           {
             name = "thiserror";
@@ -3290,51 +2920,6 @@ rec {
           "The Rust Windowing contributors"
         ];
 
-      };
-      "ndk-glue 0.5.2" = rec {
-        crateName = "ndk-glue";
-        version = "0.5.2";
-        edition = "2018";
-        sha256 = "1m44jh4f9sirs757ikc8sracg6dzw77h9l4bw9vm8s1dly7fw6y7";
-        authors = [
-          "The Rust Windowing contributors"
-        ];
-        dependencies = [
-          {
-            name = "lazy_static";
-            packageId = "lazy_static";
-          }
-          {
-            name = "libc";
-            packageId = "libc";
-          }
-          {
-            name = "log";
-            packageId = "log";
-          }
-          {
-            name = "ndk";
-            packageId = "ndk 0.5.0";
-          }
-          {
-            name = "ndk-context";
-            packageId = "ndk-context";
-          }
-          {
-            name = "ndk-macro";
-            packageId = "ndk-macro";
-          }
-          {
-            name = "ndk-sys";
-            packageId = "ndk-sys 0.2.2";
-          }
-        ];
-        features = {
-          "android_logger" = [ "dep:android_logger" ];
-          "logger" = [ "android_logger" "ndk-macro/logger" ];
-          "test" = [ "ndk/test" "ndk-sys/test" ];
-        };
-        resolvedDefaultFeatures = [ "default" ];
       };
       "ndk-glue 0.6.2" = rec {
         crateName = "ndk-glue";
@@ -3465,17 +3050,6 @@ rec {
         features = {
         };
         resolvedDefaultFeatures = [ "default" ];
-      };
-      "ndk-sys 0.2.2" = rec {
-        crateName = "ndk-sys";
-        version = "0.2.2";
-        edition = "2018";
-        sha256 = "08915adplysmvx0ha12if1v7zxzx82xgj3nnmiddkm8aq9sdvg71";
-        authors = [
-          "The Rust Windowing contributors"
-        ];
-        features = {
-        };
       };
       "ndk-sys 0.3.0" = rec {
         crateName = "ndk-sys";
@@ -4719,24 +4293,7 @@ rec {
           "serde1" = [ "serde" ];
         };
       };
-      "raw-window-handle 0.4.3" = rec {
-        crateName = "raw-window-handle";
-        version = "0.4.3";
-        edition = "2018";
-        sha256 = "0hgvrqbr2b62zhq4ryv08h92mwis9v8f7j9pwcgxzlp7nswvw05q";
-        authors = [
-          "Osspial <osspial@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "cty";
-            packageId = "cty";
-          }
-        ];
-        features = {
-        };
-      };
-      "raw-window-handle 0.5.0" = rec {
+      "raw-window-handle" = rec {
         crateName = "raw-window-handle";
         version = "0.5.0";
         edition = "2018";
@@ -5057,72 +4614,7 @@ rec {
           "serde" = [ "dep:serde" ];
         };
       };
-      "smithay-client-toolkit 0.15.4" = rec {
-        crateName = "smithay-client-toolkit";
-        version = "0.15.4";
-        edition = "2018";
-        sha256 = "18wxla80y6m4l3dwawi7bl1d9m9dfcg4sxxjcgjqq3psjxmg2a4a";
-        authors = [
-          "Victor Berger <victor.berger@m4x.org>"
-        ];
-        dependencies = [
-          {
-            name = "bitflags";
-            packageId = "bitflags";
-          }
-          {
-            name = "calloop";
-            packageId = "calloop 0.9.3";
-            optional = true;
-          }
-          {
-            name = "dlib";
-            packageId = "dlib";
-          }
-          {
-            name = "lazy_static";
-            packageId = "lazy_static";
-          }
-          {
-            name = "log";
-            packageId = "log";
-          }
-          {
-            name = "memmap2";
-            packageId = "memmap2 0.3.1";
-          }
-          {
-            name = "nix";
-            packageId = "nix 0.22.3";
-          }
-          {
-            name = "wayland-client";
-            packageId = "wayland-client";
-          }
-          {
-            name = "wayland-cursor";
-            packageId = "wayland-cursor";
-          }
-          {
-            name = "wayland-protocols";
-            packageId = "wayland-protocols";
-            features = [ "client" "unstable_protocols" ];
-          }
-        ];
-        buildDependencies = [
-          {
-            name = "pkg-config";
-            packageId = "pkg-config";
-          }
-        ];
-        features = {
-          "calloop" = [ "dep:calloop" ];
-          "default" = [ "calloop" "dlopen" ];
-          "dlopen" = [ "wayland-client/dlopen" ];
-        };
-        resolvedDefaultFeatures = [ "calloop" "dlopen" ];
-      };
-      "smithay-client-toolkit 0.16.0" = rec {
+      "smithay-client-toolkit" = rec {
         crateName = "smithay-client-toolkit";
         version = "0.16.0";
         edition = "2018";
@@ -5137,7 +4629,7 @@ rec {
           }
           {
             name = "calloop";
-            packageId = "calloop 0.10.1";
+            packageId = "calloop";
             optional = true;
           }
           {
@@ -5154,7 +4646,7 @@ rec {
           }
           {
             name = "memmap2";
-            packageId = "memmap2 0.5.5";
+            packageId = "memmap2";
           }
           {
             name = "nix";
@@ -5202,7 +4694,7 @@ rec {
         dependencies = [
           {
             name = "smithay-client-toolkit";
-            packageId = "smithay-client-toolkit 0.16.0";
+            packageId = "smithay-client-toolkit";
             rename = "sctk";
             usesDefaultFeatures = false;
           }
@@ -5215,7 +4707,7 @@ rec {
         devDependencies = [
           {
             name = "smithay-client-toolkit";
-            packageId = "smithay-client-toolkit 0.16.0";
+            packageId = "smithay-client-toolkit";
             rename = "sctk";
             usesDefaultFeatures = false;
             features = [ "calloop" ];
@@ -5634,8 +5126,8 @@ rec {
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/magnetophon/vizia";
-          rev = "bb16daa311887edfd0a76ba403e714a8bef31906";
-          sha256 = "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf";
+          rev = "e642906f947adf9b580e3d20562c4634f0e1958e";
+          sha256 = "1kjsv9xksnkqjrfimpikknqp5jjv01xjlnw5dpvnafk5wx2hrv8z";
         };
         dependencies = [
           {
@@ -5668,8 +5160,8 @@ rec {
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/magnetophon/vizia";
-          rev = "bb16daa311887edfd0a76ba403e714a8bef31906";
-          sha256 = "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf";
+          rev = "e642906f947adf9b580e3d20562c4634f0e1958e";
+          sha256 = "1kjsv9xksnkqjrfimpikknqp5jjv01xjlnw5dpvnafk5wx2hrv8z";
         };
         authors = [
           "George Atkinson"
@@ -5775,8 +5267,8 @@ rec {
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/magnetophon/vizia";
-          rev = "bb16daa311887edfd0a76ba403e714a8bef31906";
-          sha256 = "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf";
+          rev = "e642906f947adf9b580e3d20562c4634f0e1958e";
+          sha256 = "1kjsv9xksnkqjrfimpikknqp5jjv01xjlnw5dpvnafk5wx2hrv8z";
         };
         procMacro = true;
         authors = [
@@ -5805,8 +5297,8 @@ rec {
         workspace_member = null;
         src = pkgs.fetchgit {
           url = "https://github.com/magnetophon/vizia";
-          rev = "bb16daa311887edfd0a76ba403e714a8bef31906";
-          sha256 = "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf";
+          rev = "e642906f947adf9b580e3d20562c4634f0e1958e";
+          sha256 = "1kjsv9xksnkqjrfimpikknqp5jjv01xjlnw5dpvnafk5wx2hrv8z";
         };
         authors = [
           "George Atkinson"
@@ -5831,13 +5323,13 @@ rec {
           }
           {
             name = "glutin";
-            packageId = "glutin 0.28.0";
+            packageId = "glutin";
             optional = true;
             usesDefaultFeatures = false;
           }
           {
             name = "glutin";
-            packageId = "glutin 0.29.0";
+            packageId = "glutin";
             usesDefaultFeatures = false;
             target = { target, features }: (!(target."arch" == "wasm32"));
           }
@@ -5864,7 +5356,7 @@ rec {
           }
           {
             name = "winit";
-            packageId = "winit 0.26.1";
+            packageId = "winit";
             usesDefaultFeatures = false;
           }
         ];
@@ -6784,7 +6276,7 @@ rec {
         features = {
           "debug" = [ "impl-debug" ];
         };
-        resolvedDefaultFeatures = [ "audioclient" "audiosessiontypes" "basetsd" "combaseapi" "coml2api" "commctrl" "consoleapi" "debug" "devpkey" "dwmapi" "errhandlingapi" "fileapi" "handleapi" "hidusage" "imm" "impl-debug" "ksmedia" "libloaderapi" "minwindef" "mmdeviceapi" "mmsystem" "ntstatus" "objbase" "ole2" "processenv" "processthreadsapi" "profileapi" "shellapi" "shellscalingapi" "shobjidl_core" "std" "stringapiset" "synchapi" "timeapi" "unknwnbase" "winbase" "wincon" "windowsx" "winerror" "wingdi" "winnls" "winnt" "winuser" ];
+        resolvedDefaultFeatures = [ "audioclient" "audiosessiontypes" "basetsd" "combaseapi" "coml2api" "consoleapi" "debug" "devpkey" "errhandlingapi" "fileapi" "handleapi" "impl-debug" "ksmedia" "libloaderapi" "minwindef" "mmdeviceapi" "ntstatus" "objbase" "processenv" "profileapi" "shellapi" "std" "stringapiset" "synchapi" "winbase" "wincon" "winerror" "wingdi" "winnls" "winnt" "winuser" ];
       };
       "winapi-i686-pc-windows-gnu" = rec {
         crateName = "winapi-i686-pc-windows-gnu";
@@ -7609,194 +7101,7 @@ rec {
         ];
 
       };
-      "winit 0.26.1" = rec {
-        crateName = "winit";
-        version = "0.26.1";
-        edition = "2018";
-        sha256 = "0fp7cdh7llbqmm6ga8f6bzk9785jmkbyy1w631hr9faq3n9wqhwv";
-        authors = [
-          "The winit contributors"
-          "Pierre Krieger <pierre.krieger1708@gmail.com>"
-        ];
-        dependencies = [
-          {
-            name = "bitflags";
-            packageId = "bitflags";
-          }
-          {
-            name = "cocoa";
-            packageId = "cocoa";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "core-graphics";
-            packageId = "core-graphics 0.22.3";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "core-video-sys";
-            packageId = "core-video-sys";
-            usesDefaultFeatures = false;
-            target = { target, features }: (target."os" == "macos");
-            features = [ "display_link" ];
-          }
-          {
-            name = "dispatch";
-            packageId = "dispatch";
-            target = { target, features }: (target."os" == "macos");
-          }
-          {
-            name = "instant";
-            packageId = "instant";
-            features = [ "wasm-bindgen" ];
-          }
-          {
-            name = "lazy_static";
-            packageId = "lazy_static";
-          }
-          {
-            name = "libc";
-            packageId = "libc";
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-          }
-          {
-            name = "log";
-            packageId = "log";
-          }
-          {
-            name = "mio";
-            packageId = "mio";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-            features = [ "os-ext" ];
-          }
-          {
-            name = "ndk";
-            packageId = "ndk 0.5.0";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "ndk-glue";
-            packageId = "ndk-glue 0.5.2";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "ndk-sys";
-            packageId = "ndk-sys 0.2.2";
-            target = { target, features }: (target."os" == "android");
-          }
-          {
-            name = "objc";
-            packageId = "objc";
-            target = { target, features }: ((target."os" == "ios") || (target."os" == "macos"));
-          }
-          {
-            name = "parking_lot";
-            packageId = "parking_lot 0.11.2";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-          }
-          {
-            name = "parking_lot";
-            packageId = "parking_lot 0.11.2";
-            target = { target, features }: (target."os" == "windows");
-          }
-          {
-            name = "percent-encoding";
-            packageId = "percent-encoding";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-          }
-          {
-            name = "raw-window-handle";
-            packageId = "raw-window-handle 0.4.3";
-          }
-          {
-            name = "smithay-client-toolkit";
-            packageId = "smithay-client-toolkit 0.15.4";
-            rename = "sctk";
-            optional = true;
-            usesDefaultFeatures = false;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-            features = [ "calloop" ];
-          }
-          {
-            name = "wasm-bindgen";
-            packageId = "wasm-bindgen";
-            target = { target, features }: (target."arch" == "wasm32");
-          }
-          {
-            name = "wayland-client";
-            packageId = "wayland-client";
-            optional = true;
-            usesDefaultFeatures = false;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-            features = [ "use_system_lib" ];
-          }
-          {
-            name = "wayland-protocols";
-            packageId = "wayland-protocols";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-            features = [ "staging_protocols" ];
-          }
-          {
-            name = "web-sys";
-            packageId = "web-sys";
-            rename = "web_sys";
-            target = { target, features }: (target."arch" == "wasm32");
-            features = [ "console" "AddEventListenerOptions" "CssStyleDeclaration" "BeforeUnloadEvent" "Document" "DomRect" "Element" "Event" "EventTarget" "FocusEvent" "HtmlCanvasElement" "HtmlElement" "KeyboardEvent" "MediaQueryList" "MediaQueryListEvent" "MouseEvent" "Node" "PointerEvent" "Window" "WheelEvent" ];
-          }
-          {
-            name = "winapi";
-            packageId = "winapi";
-            target = { target, features }: (target."os" == "windows");
-            features = [ "combaseapi" "commctrl" "dwmapi" "errhandlingapi" "imm" "hidusage" "libloaderapi" "objbase" "ole2" "processthreadsapi" "shellapi" "shellscalingapi" "shobjidl_core" "unknwnbase" "winbase" "windowsx" "winerror" "wingdi" "winnt" "winuser" "mmsystem" "timeapi" ];
-          }
-          {
-            name = "x11-dl";
-            packageId = "x11-dl";
-            optional = true;
-            target = { target, features }: ((target."os" == "linux") || (target."os" == "dragonfly") || (target."os" == "freebsd") || (target."os" == "openbsd") || (target."os" == "netbsd"));
-          }
-        ];
-        features = {
-          "default" = [ "x11" "wayland" "wayland-dlopen" ];
-          "mint" = [ "dep:mint" ];
-          "mio" = [ "dep:mio" ];
-          "parking_lot" = [ "dep:parking_lot" ];
-          "percent-encoding" = [ "dep:percent-encoding" ];
-          "sctk" = [ "dep:sctk" ];
-          "serde" = [ "dep:serde" ];
-          "wayland" = [ "wayland-client" "wayland-protocols" "sctk" ];
-          "wayland-client" = [ "dep:wayland-client" ];
-          "wayland-dlopen" = [ "sctk/dlopen" "wayland-client/dlopen" ];
-          "wayland-protocols" = [ "dep:wayland-protocols" ];
-          "x11" = [ "x11-dl" "mio" "percent-encoding" "parking_lot" ];
-          "x11-dl" = [ "dep:x11-dl" ];
-        };
-        resolvedDefaultFeatures = [ "mio" "parking_lot" "percent-encoding" "sctk" "wayland" "wayland-client" "wayland-dlopen" "wayland-protocols" "x11" "x11-dl" ];
-        nativeBuildInputs = with pkgs; [
-          makeWrapper # to be able to use wrapProgram
-          pkg-config ];
-        buildInputs = with pkgs; [
-          libxkbcommon
-          libGL
-          xorg.libXcursor
-          xorg.libXrandr
-          xorg.libXi
-          xorg.libX11 ];
-        postInstall = ''
-              wrapProgram $out/bin/winit_nix --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath linuxInputs}"
-             '';
-
-      };
-      "winit 0.27.1" = rec {
+      "winit" = rec {
         crateName = "winit";
         version = "0.27.1";
         edition = "2021";
@@ -7817,12 +7122,12 @@ rec {
           }
           {
             name = "core-foundation";
-            packageId = "core-foundation 0.9.3";
+            packageId = "core-foundation";
             target = { target, features }: (target."os" == "macos");
           }
           {
             name = "core-graphics";
-            packageId = "core-graphics 0.22.3";
+            packageId = "core-graphics";
             target = { target, features }: (target."os" == "macos");
           }
           {
@@ -7889,11 +7194,11 @@ rec {
           }
           {
             name = "raw-window-handle";
-            packageId = "raw-window-handle 0.5.0";
+            packageId = "raw-window-handle";
           }
           {
             name = "smithay-client-toolkit";
-            packageId = "smithay-client-toolkit 0.16.0";
+            packageId = "smithay-client-toolkit";
             rename = "sctk";
             optional = true;
             usesDefaultFeatures = false;
@@ -7970,7 +7275,7 @@ rec {
           xorg.libXi
           xorg.libX11 ];
         postInstall = ''
-              wrapProgram $out/bin/winit_nix --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath linuxInputs}"
+              wrapProgram $out/bin/winit --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath buildInputs}"
              '';
       };
       "x11-clipboard" = rec {
