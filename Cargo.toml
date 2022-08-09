@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 cpal = "0.13.5"
 anyhow = "1.0.58"
-vizia = {git = "https://github.com/geom3trik/vizia"}
+vizia = {git = "https://github.com/vizia/vizia", features = ["x11"]}
 crossbeam-channel = "0.5.5"

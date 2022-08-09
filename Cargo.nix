@@ -249,6 +249,7 @@ rec {
           {
             name = "vizia";
             packageId = "vizia";
+            features = [ "x11" ];
           }
         ];
 
@@ -5189,7 +5190,7 @@ rec {
         edition = "2021";
         workspace_member = null;
         src = pkgs.fetchgit {
-          url = "https://github.com/geom3trik/vizia";
+          url = "https://github.com/vizia/vizia";
           rev = "902c821e4dbde2876558c186185dcc60bbb94e16";
           sha256 = "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj";
         };
@@ -5223,7 +5224,7 @@ rec {
         edition = "2021";
         workspace_member = null;
         src = pkgs.fetchgit {
-          url = "https://github.com/geom3trik/vizia";
+          url = "https://github.com/vizia/vizia";
           rev = "902c821e4dbde2876558c186185dcc60bbb94e16";
           sha256 = "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj";
         };
@@ -5330,7 +5331,7 @@ rec {
         edition = "2018";
         workspace_member = null;
         src = pkgs.fetchgit {
-          url = "https://github.com/geom3trik/vizia";
+          url = "https://github.com/vizia/vizia";
           rev = "902c821e4dbde2876558c186185dcc60bbb94e16";
           sha256 = "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj";
         };
@@ -5360,7 +5361,7 @@ rec {
         edition = "2021";
         workspace_member = null;
         src = pkgs.fetchgit {
-          url = "https://github.com/geom3trik/vizia";
+          url = "https://github.com/vizia/vizia";
           rev = "902c821e4dbde2876558c186185dcc60bbb94e16";
           sha256 = "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj";
         };
