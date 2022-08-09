@@ -195,6 +195,10 @@ rec {
             packageId = "pkg-config";
           }
         ];
+        nativeBuildInputs = with pkgs; [ pkg-config ];
+        buildInputs = with pkgs; [ alsaLib ];
+
+
 
       };
       "android_glue" = rec {
@@ -7777,6 +7781,20 @@ rec {
           "x11-dl" = [ "dep:x11-dl" ];
         };
         resolvedDefaultFeatures = [ "mio" "parking_lot" "percent-encoding" "sctk" "wayland" "wayland-client" "wayland-dlopen" "wayland-protocols" "x11" "x11-dl" ];
+        nativeBuildInputs = with pkgs; [
+          makeWrapper # to be able to use wrapProgram
+          pkg-config ];
+        buildInputs = with pkgs; [
+          libxkbcommon
+          libGL
+          xorg.libXcursor
+          xorg.libXrandr
+          xorg.libXi
+          xorg.libX11 ];
+        postInstall = ''
+              wrapProgram $out/bin/winit_nix --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath linuxInputs}"
+             '';
+
       };
       "winit 0.27.1" = rec {
         crateName = "winit";
@@ -7941,6 +7959,19 @@ rec {
           "x11-dl" = [ "dep:x11-dl" ];
         };
         resolvedDefaultFeatures = [ "mio" "parking_lot" "percent-encoding" "sctk" "wayland" "wayland-client" "wayland-dlopen" "wayland-protocols" "x11" "x11-dl" ];
+        nativeBuildInputs = with pkgs; [
+          makeWrapper # to be able to use wrapProgram
+          pkg-config ];
+        buildInputs = with pkgs; [
+          libxkbcommon
+          libGL
+          xorg.libXcursor
+          xorg.libXrandr
+          xorg.libXi
+          xorg.libX11 ];
+        postInstall = ''
+              wrapProgram $out/bin/winit_nix --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath linuxInputs}"
+             '';
       };
       "x11-clipboard" = rec {
         crateName = "x11-clipboard";
