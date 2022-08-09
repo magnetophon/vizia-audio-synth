@@ -2006,6 +2006,7 @@ rec {
             name = "winit";
             packageId = "winit";
             usesDefaultFeatures = false;
+            features = [ "x11" ];
           }
         ];
         features = {
@@ -5358,6 +5359,7 @@ rec {
             name = "winit";
             packageId = "winit";
             usesDefaultFeatures = false;
+            features = [ "x11" ];
           }
         ];
         features = {
@@ -7274,9 +7276,9 @@ rec {
           xorg.libXrandr
           xorg.libXi
           xorg.libX11 ];
-        postInstall = ''
-              wrapProgram $out/bin/winit --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath buildInputs}"
-             '';
+        # postInstall = ''
+        # wrapProgram $out/bin/winit --set LD_LIBRARY_PATH "${pkgs.lib.makeLibraryPath buildInputs}"
+        # '';
       };
       "x11-clipboard" = rec {
         crateName = "x11-clipboard";
