@@ -1,8 +1,8 @@
 {
   "femtovg 0.3.3 (git+https://github.com/femtovg/femtovg?rev=87fe627794f3f793d8e3a338c838a2f8e8a8aa9d#87fe627794f3f793d8e3a338c838a2f8e8a8aa9d)": "0k69xdqprw8lsnddxnjy87kwjica8bqh75nisiblvfqhb08ryy0x",
   "morphorm 0.3.0 (git+https://github.com/vizia/morphorm?rev=c14e888b1d66719fc3f13ccdb1ea01a10368ef9e#c14e888b1d66719fc3f13ccdb1ea01a10368ef9e)": "1hjrh520c09jwin0yvb494xmkrzi40ginkw87sjf1va89d2m1gq3",
-  "vizia 0.1.0 (git+https://github.com/vizia/vizia#902c821e4dbde2876558c186185dcc60bbb94e16)": "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj",
-  "vizia_core 0.1.0 (git+https://github.com/vizia/vizia#902c821e4dbde2876558c186185dcc60bbb94e16)": "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj",
-  "vizia_derive 0.1.0 (git+https://github.com/vizia/vizia#902c821e4dbde2876558c186185dcc60bbb94e16)": "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj",
-  "vizia_winit 0.1.0 (git+https://github.com/vizia/vizia#902c821e4dbde2876558c186185dcc60bbb94e16)": "07rrh1gdg21msyg67r6m1mw0fj5qcd94csfi8wrcvgpw4fgvkprj"
+  "vizia 0.1.0 (git+https://github.com/magnetophon/vizia#bb16daa311887edfd0a76ba403e714a8bef31906)": "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf",
+  "vizia_core 0.1.0 (git+https://github.com/magnetophon/vizia#bb16daa311887edfd0a76ba403e714a8bef31906)": "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf",
+  "vizia_derive 0.1.0 (git+https://github.com/magnetophon/vizia#bb16daa311887edfd0a76ba403e714a8bef31906)": "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf",
+  "vizia_winit 0.1.0 (git+https://github.com/magnetophon/vizia#bb16daa311887edfd0a76ba403e714a8bef31906)": "0db0shfdgvzv9jbnhi8i78rwqbxn8s4kv8q3wdi93gs95h94rxnf"
 }
